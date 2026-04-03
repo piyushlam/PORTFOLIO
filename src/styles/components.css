@@ -1,0 +1,131 @@
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background:
+    radial-gradient(circle at center, rgba(91, 124, 255, 0.16), transparent 30%),
+    #02040d;
+  display: grid;
+  place-items: center;
+}
+
+.loader-core {
+  position: relative;
+  width: min(82vw, 360px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.loader-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(103, 232, 249, 0.36);
+  box-shadow: 0 0 32px rgba(103, 232, 249, 0.12);
+}
+
+.loader-ring.secondary {
+  inset: 26px;
+  border-style: dashed;
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.loader-text {
+  width: min(72vw, 260px);
+  text-align: center;
+  display: grid;
+  gap: 10px;
+}
+
+.loader-text span {
+  color: var(--cyan);
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+}
+
+.loader-text strong {
+  font-size: 1.3rem;
+}
+
+.loader-bar {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--violet), var(--cyan));
+  transform-origin: left;
+  box-shadow: 0 0 20px rgba(103, 232, 249, 0.26);
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  pointer-events: none;
+  z-index: 90;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
+}
+
+.custom-cursor__arrow,
+.custom-cursor__pulse {
+  position: absolute;
+}
+
+.custom-cursor__arrow {
+  width: 0;
+  height: 0;
+  left: 6px;
+  top: 2px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid rgba(103, 232, 249, 0.82);
+  filter: drop-shadow(0 0 10px rgba(103, 232, 249, 0.4));
+  transform: rotate(35deg);
+}
+
+.custom-cursor__pulse {
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(103, 232, 249, 0.1);
+  box-shadow: 0 0 14px rgba(103, 232, 249, 0.08);
+  animation: cursorPulse 1.8s ease-in-out infinite;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  width: 4px;
+  height: 100vh;
+  z-index: 50;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.scroll-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  background: linear-gradient(180deg, var(--cyan), var(--violet));
+  box-shadow: 0 0 24px rgba(103, 232, 249, 0.36);
+}
+
+@keyframes cursorPulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}

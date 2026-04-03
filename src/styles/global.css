@@ -1,0 +1,66 @@
+:root {
+  color-scheme: dark;
+  --bg: #030615;
+  --bg-soft: rgba(11, 18, 45, 0.72);
+  --panel: rgba(13, 20, 46, 0.54);
+  --panel-strong: rgba(18, 27, 61, 0.82);
+  --line: rgba(125, 211, 252, 0.24);
+  --text: #ecfeff;
+  --muted: #90a8d8;
+  --cyan: #67e8f9;
+  --blue: #5b7cff;
+  --violet: #8b5cf6;
+  --pink: #ff5db1;
+  --shadow: 0 20px 60px rgba(5, 8, 24, 0.45);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(91, 124, 255, 0.2), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255, 93, 177, 0.14), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(103, 232, 249, 0.12), transparent 26%),
+    var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  cursor: auto;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(255, 255, 255, 0.02), transparent 38%, rgba(103, 232, 249, 0.02));
+  pointer-events: none;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a,
+input,
+textarea {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
