@@ -34,21 +34,21 @@ const portfolio = {
       tech: ['React', 'Node.js', 'JavaScript', 'PDF Export', 'TXT Export'],
       description:
         'A transcript workflow app that fetches, displays, summarizes, and exports video transcripts with dark mode, recent history, local caching, and AI-assisted usability features.',
-      github: '#',
+      github: 'https://github.com/piyushlam/YouTube_Transcript.git',
     },
     {
       title: 'Canteen Management System',
       tech: ['React', 'PHP', 'JavaScript'],
       description:
         'A full stack canteen platform for menu browsing, ordering, billing, login and registration flows, plus an admin panel for stock and system management.',
-      github: '#',
+      github: 'https://github.com/piyushlam/Canteen_Management_System1.git',
     },
     {
       title: 'AI-Powered Attendance System',
       tech: ['React', 'OpenCV', 'Python', 'Node.js'],
       description:
         'An AI-powered attendance system that uses OpenCV for real-time face detection and recognition to automatically mark student attendance. Built with a React frontend and Python-based backend, it captures live video, identifies students from trained datasets, and stores attendance efficiently to reduce manual effort and proxy issues while delivering a smart, seamless experience.',
-      github: '#',
+      github: 'https://github.com/piyushlam/face-sheet-magic.git',
     },
   ],
   skillGroups: [
